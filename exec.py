@@ -23,4 +23,5 @@ except Exception as e:
 else: 
   status_code = line_notify_client.send_message(message)
   if status_code == 200:
+    # DynamoDBに保存
      call() 
