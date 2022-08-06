@@ -1,5 +1,9 @@
 
 import requests
+
+# Line Notify Docs
+# @see https://notify-bot.line.me/doc/ja/
+
 class LineNotify:
   def __init__(self, token):
     self.token = token

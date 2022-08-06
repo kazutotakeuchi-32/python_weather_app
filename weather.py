@@ -1,7 +1,9 @@
 import requests # pip install requests
 
-class Weather:
+# OpenWeatherMap Docs
+# @see https://openweathermap.org/api/one-call-3
 
+class Weather:
   def __init__(self, key):
     self.api_key = key
 
