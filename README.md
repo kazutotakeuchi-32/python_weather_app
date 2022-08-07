@@ -8,7 +8,7 @@
 - EventBridgeでjobを設定
 - Lambda関数でOpenWeatherから今日の天気情報を取得する
 - データをLINE Notiyに通知
-→ 異常系な場合は、「システムエラー」ですと通知
+→ 異常系な場合は、「システムエラーです」と通知
 - 問題がなければDynamoDBに1日毎の天気情報を書き込む
 <img src="https://i.gyazo.com/fe3a19d9a0e3cda44bee2623c9384601.png" alt="DB">
 
