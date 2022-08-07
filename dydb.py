@@ -14,3 +14,13 @@ class Db:
       raise e
     else:
       return True
+  
+  def select(self, key):
+    try:
+      response = self.table.get_item(Key = key)
+    except Exception, e:
+      raise e
+    else:
+      return response["Item"]
+
+  
