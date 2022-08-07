@@ -10,7 +10,7 @@ class Db:
   def insert(self, data):
     try:
       self.table.put_item(Item = data)
-    except Exception, e:
+    except Exception as e:
       raise e
     else:
       return True
@@ -18,8 +18,8 @@ class Db:
   def select(self, key):
     try:
       response = self.table.get_item(Key = key)
-    except Exception, e:
-      raise e
+    except Exception as e:
+      pass
     else:
       return response["Item"]
 
