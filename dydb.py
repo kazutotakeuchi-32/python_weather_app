@@ -15,12 +15,19 @@ class Db:
     else:
       return True
   
-  def select(self, key):
+  def select(self, id):
     try:
-      response = self.table.get_item(Key = key)
+      print(id)
+      response = self.table.get_item( Key={
+            'id': id
+      })
+
     except Exception as e:
       pass
     else:
-      return response["Item"]
-
+      if "Item" in response.keys() :
+        return response["Item"]
+      else:
+        return { 'condition': "", 'temp_highest': 0, 'temp': 0, 'id': id,'temp_lowest': 0}
+       
   
